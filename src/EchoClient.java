@@ -1,5 +1,3 @@
-package echoserver;
-
 import java.net.*;
 import java.io.*;
 
@@ -28,8 +26,10 @@ public class EchoClient {
 
             while ((b = System.in.read())!= -1) {
                 output.write(b);
-                System.out.println(input.read());
+                output.flush();
+                System.out.print(input.read());
             }
+            System.out.flush();
 
             // Close the socket when we're done reading from it
             socket.close();
