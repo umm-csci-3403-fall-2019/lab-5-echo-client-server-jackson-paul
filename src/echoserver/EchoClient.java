@@ -29,7 +29,7 @@ public class EchoClient {
             while ((b = System.in.read())!= -1) {
                 output.write(b);
                 output.flush();
-                System.out.print(input.read());
+                System.out.write(input.read());
             }
             System.out.flush();
 
